@@ -1,0 +1,338 @@
+    /* List aur image ke liye styling */
+  .friend-list {
+      padding: 0;
+      margin: 0;
+    }
+    .friend-list li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      list-style-position: inside;
+    }
+    .friend-list img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .friend-name {
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+    /* Popup ke liye styling */
+   .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .popup p {
+      margin: 10px 0;
+    }
+    .popup button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    /* Styling for clickable texts and logos */
+    .clickable {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+      margin-right: 10px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .clickable img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+/*new/*
+
+/* 🔹 Friends List Styling */
+.friend-list {
+    padding: 0;
+    margin: 0;
+    max-height: 80vh; /* Scroll enable */
+    overflow-y: auto;  
+}
+
+.friend-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    list-style: none;
+    position: relative;
+    animation: slideNames 3s infinite alternate;
+}
+
+/* 🔹 Friends Image */
+.friend-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* 🔹 Friend Name Animation */
+.friend-name {
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff6f61, #6a5acd);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+/* 🔹 Names Slide Left to Right */
+@keyframes slideNames {
+    0% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* 🔹 Tooltip Styling */
+.tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 🔹 Tooltip Show */
+.tooltip.show-tooltip {
+    opacity: 1;
+}
+
+/* 🔹 Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 12px;
+}
+
+/* 🔹 Clickable Elements */
+.clickable {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 🔹 Clickable Logos */
+.clickable img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* 🔹 Animated Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("clouds.gif") center/cover no-repeat;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% { background-position: 0 0; }
+    100% { background-position: -1000px 0; }
+}
+
+/*final *\
+
+/* 🔹 Friends List Styling */
+.friend-list {
+    padding: 0;
+    margin: 0;
+    max-height: 80vh; /* Scroll enable */
+    overflow-y: auto;  
+}
+
+.friend-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    list-style: none;
+    position: relative;
+    animation: slideNames 3s infinite alternate;
+}
+
+/* 🔹 Friends Image */
+.friend-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* 🔹 Friend Name Animation */
+.friend-name {
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff6f61, #6a5acd);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+/* 🔹 Names Slide Left to Right */
+@keyframes slideNames {
+    0% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* 🔹 Tooltip Styling */
+.tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 🔹 Tooltip Show */
+.tooltip.show-tooltip {
+    opacity: 1;
+}
+
+/* 🔹 Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 12px;
+}
+
+/* 🔹 Clickable Elements */
+.clickable {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 🔹 Clickable Logos */
+.clickable img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* 🔹 Animated Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("clouds.gif") center/cover no-repeat;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% { background-position: 0 0; }
+    100% { background-position: -1000px 0; }
+}
+
+/* 🔹 My Life and My Friends Heading */
+aside h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    background: linear-gradient(45deg, #ff6f61, #6a5acd);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip ko chota aur perfect size mein set karna */
+.tooltip {
+    position: absolute;
+    top: -18px; /* Thoda aur upar */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 2px 5px; /* Extra small padding */
+    font-size: 9px; /* Smallest font */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded edges */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Tooltip show hone ka smooth effect */
+.tooltip.show-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* Tooltip ko thoda aur stylish aur compact banane ke liye */
+.friend-list li {
+    position: relative;
+    padding: 8px 10px; /* Small padding */
+}
+
+.friend-name {
+    font-size: 14px; /* Friend name ka size bhi adjust */
+    padding: 4px 8px; /* Chota aur fit */
+    border-radius: 20px; /* Smooth look */
+}
+
+
+
+
